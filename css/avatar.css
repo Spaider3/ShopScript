@@ -1,0 +1,115 @@
+:root {
+    --avatar-size: 140px;
+    --ring: 3px;
+    --accent: #5b6cff;
+    --danger: #e5484d;
+    --text: #1f2328;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f4f5f7;
+    color: var(--text);
+}
+
+.avatar-page {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
+    text-align: center;
+}
+
+.avatar-page h1 {
+    margin: 0 0 24px;
+    font-size: 22px;
+}
+
+.avatar-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar-picker {
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Круглая обрезка — ключевое правило */
+.avatar-preview {
+    position: relative;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    overflow: hidden;
+    border: var(--ring) solid var(--accent);
+    background: #eceef1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* заполняет круг без искажений */
+    display: block;
+}
+
+.avatar-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, .45);
+    opacity: 0;
+    transition: opacity .2s ease;
+    border-radius: 50%;
+}
+
+.avatar-picker:hover .avatar-overlay {
+    opacity: 1;
+}
+
+.avatar-hint {
+    margin: 0;
+    font-size: 13px;
+    color: #6b7178;
+}
+
+.avatar-error {
+    color: var(--danger);
+    font-size: 13px;
+    margin: 0;
+}
+
+.avatar-submit {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.avatar-submit:hover {
+    background: #4857e0;
+}

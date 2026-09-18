@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin:0;
+	padding:0;
+}
+::selection {
+background: #b3d7ff; /* Safari,Opera */
+}
+::-moz-selection {
+background: #b3d7ff; /* Firefox */
+}
+h1 {
+	color:#FFF;
+	font-size:18px;
+}
+img {
+	border:none;
+	outline:none;
+}
+a:link {
+	text-decoration:none;
+	color:#378cff;
+}
+a:visited {
+	text-decoration:none;
+	color:#378cff;
+}
+a:active {
+	text-decoration:underline;
+	color:#378cff;
+}
+a:hover {
+	text-decoration:underline;
+	color:#378cff;
+}
+#menu {
+	width:600px;
+	margin-bottom:5px;
+}
+#menu_2 {
+	margin:20px;
+	width:800px;
+}
+ul#hmenu {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	padding-top:1px;
+  	list-style: none;
+	background: #f2f8ff;
+  	height: 28px;
+}
+
+ul#hmenu li {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	float: left;
+	display: inline;
+	list-style: none;
+	position: relative;
+	height: 28px;
+}
+
+ul#hmenu ul {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 160px;
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: 0;
+}
+
+ul#hmenu ul:after {
+	border:0 none;
+	clear: both;
+	display: block;
+	font: 1px/0px serif;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+
+ul#hmenu ul li {
+	border0 none;
+	width: 160px;
+	float: left;
+	display: block !important;
+	display: inline;
+}
+
+/* Main Menu */
+ul#hmenu a {
+	border: 0px;
+	padding: 5px;
+	float: none !important;
+	float: left;
+	display: block;
+	background: #f2f8ff;
+	color: #56a6ff;
+	text-decoration: none;
+	height: auto !important;
+	height: 1%;
+	outline:none;
+}
+
+/* Main Menu Hover */
+ul#hmenu a:hover,
+ul#hmenu li:hover a,
+ul#hmenu li.iehover a {
+	border 0 none;
+	border-bottom:1px solid #e0e0e0;
+	border-top:1px solid #cfe1e7;
+	background: #d1e7ff;
+}
+#overlay {
+	background:#000;
+	opacity:0.5;
+	display:none;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:100;
+	cursor:pointer;
+	cursor:hand;
+}
+#href {
+	cursor:pointer;
+}
+#name {
+	margin:0px;
+	padding:0px;
+	background-color:#eaf2ff;
+	outline:1px dashed #cfe2fe;
+}
+#admin_cp {
+	border:1px solid #CCC;
+}
+#admin_cp th {
+	background-color:#cfe8ff;
+}
+#admin_cp td {
+	background-color:#edf4ff;
+}
+#error_div {
+	margin:5px;
+}
+#error {
+	margin:0 auto;
+	margin-top:5px;
+	padding-top:10px;
+	color:#ff6e6e;
+	background-color:#ffeaea;
+	border:1px solid #ff6e6e;
+	width:99%;
+	min-height:30px;
+}
+#hint {
+	margin:0 auto;
+	margin-top:5px;
+	padding-top:10px;
+	color:#ffa72f;
+	background-color:#fff4d7;
+	border:1px solid #ffa72f;
+	width:99%;
+	min-height:30px;
+}
+#form_authorization {
+	margin:0;
+	padding:0px;
+	padding:5px;
+	background-color:#FFC;
+	border-bottom:1px solid #EBEBEB;
+	height:65px;
+}
+#logotype {
+	margin:0;
+	padding:10px;
+	background-image:url(../images/logo.jpg);
+	background-repeat:repeat-x;
+	background-color:#FFC;
+	border-bottom:1px solid #EBEBEB;
+	height:60px;
+}
+#load {
+	margin:0px auto;
+	margin-top:10px;
+	padding:20px;
+	border:1px dotted #000;
+	/*height:30px;*/
+	width:700px;
+	background-color:#cee7ff;
+}
+#content {
+	margin-top:10px;
+	color:#8795d1;
+}
+#pagination {
+	padding:10px;
+}
+#rate {
+	width:200px;
+	padding-bottom:5px;
+}
+#rate_text { 
+    font-size: 15px;
+	color:#c9b48a;
+	/*color:#fff;*/
+    padding-top: 2px;
+	/*padding-top:1px;*/
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    z-index: 2;
+}
+#rate_left {
+	/*background-image:url(../images/rate_left.jpg);*/
+	background-color:#efd9ac;
+	float:left;
+    border-top:1px solid #ddcfb2;
+    height: 17px;
+    z-index: -1;
+}
+#rate_right {
+	/*background-image:url(../images/rate_right.jpg);
+	background-position:right;*/
+	background-color:#ffe8b1;
+	float:right;
+    border-top:1px solid #ddcfb2;
+    height: 17px;
+    z-index: -1;
+}
+#comment {
+	margin:10px;
+	padding:10px;
+	width:600px;
+	background:#ECFFFF;
+	border:1px solid #DDF4FF;
+}
+#comment tr {
+	cursor:pointer;
+}
+.my-message {
+   width:300px;
+   height:110px;
+   background-color:#F08080;
+   text-align: center;
+   border: 2px groove black;
+}
+.my-message-title {
+  height:20px;
+  font-size:120%;
+  background-color:red;
+}
+.my-message-body {
+  padding: 5px;
+  height: 50px;
+}

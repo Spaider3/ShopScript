@@ -1,0 +1,114 @@
+*{box-sizing:border-box}
+html{min-height:100%}
+body{margin:0;min-height:100vh;padding:24px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f1f3f5;color:#1a1a1a}
+img{max-width:100%;border:0;outline:0}
+a{color:#2563eb}a:hover{color:#1d4ed8}
+#container{width:min(1040px,100%);margin:0 auto;overflow:hidden;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+#header{padding:18px 22px;background:#fff;border-bottom:1px solid #e5e7eb;color:#1a1a1a;font-size:22px;font-weight:700}
+#menu{float:right;padding:2px 0 0;font-size:13px;font-weight:400;color:#6b7280;line-height:1.8}#menu a{color:#2563eb;text-decoration:none}#menu a:hover{text-decoration:underline}
+.inline_logout_form{display:inline;margin:0}.link_button{padding:0;border:0;background:none;color:#2563eb;font:inherit;cursor:pointer}.link_button:hover{text-decoration:underline}
+#content{float:left;width:calc(100% - 260px);min-height:500px;padding:24px;background:#fff;border-right:1px solid #e5e7eb}
+#photo{float:right;width:260px;padding:24px;background:#fafafa}
+#avatar{width:100%;max-width:210px;margin:0 auto 18px;overflow:hidden;border-radius:14px;background:#eef0f3;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+#avatar img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+#user_info{margin-bottom:18px;padding:14px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;font-size:13px;color:#6b7280}
+#user_status{margin-bottom:7px;color:#374151;font-weight:600}.status_dot{display:inline-block;width:9px;height:9px;margin-right:6px;border-radius:50%;vertical-align:1px;background:#9ca3af}.status_dot.online{background:#22c55e}.status_dot.offline{background:#9ca3af}
+#user_reg_date,#user_last_seen{margin-top:5px}
+#rate{width:100%;padding-top:2px}#rate_text{position:relative;z-index:2;width:100%;height:20px;margin-bottom:-20px;color:#6b7280;font-size:13px;line-height:20px;text-align:center}#rate>div:last-child{display:flex;width:100%;overflow:hidden;border-radius:6px;background:#f3f4f6}#rate_left,#rate_right{height:20px;float:none;border-top:0}#rate_left{background:#dbeafe}#rate_right{background:#f3f4f6}
+#profile_menu{display:flex;flex-direction:column;gap:8px;margin-top:18px}#profile_menu .button{display:block;width:100%;padding:9px 12px;text-align:center}
+.badge_count{display:inline-block;min-width:18px;padding:1px 6px;margin-left:4px;border-radius:999px;background:#ef4444;color:#fff;font-size:12px;font-weight:700;line-height:16px;text-align:center;vertical-align:middle}
+.notif_bell{position:relative;display:inline-block;vertical-align:middle}
+.notif_bell .notif_bell_toggle{list-style:none;display:inline-flex;align-items:center;cursor:pointer;font-size:15px;line-height:1;padding:2px 2px 2px 0;user-select:none}
+.notif_bell .notif_bell_toggle::-webkit-details-marker{display:none}
+.notif_bell .notif_bell_toggle::marker{content:''}
+.notif_bell .notif_bell_toggle .badge_count{margin-left:3px;padding:0 5px;min-width:15px;font-size:11px;line-height:15px}
+.notif_bell[open] .notif_bell_toggle{opacity:.7}
+.notif_bell_menu{position:absolute;right:0;top:100%;z-index:30;margin-top:6px;min-width:270px;padding:6px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 8px 24px rgba(15,23,42,.14);text-align:left}
+.notif_bell_menu a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:7px;color:#1f2937;font-size:13px;font-weight:500;text-decoration:none}
+.notif_bell_menu a:hover{background:#f3f4f6;text-decoration:none}
+.notif_bell_menu a .badge_count{margin-left:8px;flex-shrink:0}
+#error_div:empty{display:none}#error_div{margin-bottom:16px;padding:12px;border:1px solid #fecaca;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px}
+#comment{font-size:14px}#name{margin-top:10px;padding:9px 11px;border-bottom:1px solid #dbeafe;border-radius:7px 7px 0 0;background:#eff6ff;color:#2563eb;font-weight:600;display:flex;align-items:center;gap:8px}.comment-avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;flex-shrink:0}.comment-author-name{flex:1}#comm{padding:10px 11px 12px;border-bottom:1px solid #e5e7eb;color:#374151;line-height:1.55;overflow-wrap:anywhere}#comm img{width:auto;vertical-align:middle}#delete{margin-left:auto}#delete img{width:18px;height:18px}
+#post{margin-top:24px;padding-top:20px;border-top:1px solid #e5e7eb;color:#374151}#post form{max-width:520px;margin:0 auto}#post table,#inline_login_form table{width:100%;border-collapse:separate;border-spacing:0 10px}#post td:first-child,#inline_login_form td:first-child{width:90px;padding-right:12px;color:#374151;font-size:14px;font-weight:500}
+#post input,#post textarea,#inline_login_form input,#message_form textarea{width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;background:#fff;color:#1f2937;font:inherit}#post input:focus,#post textarea:focus,#inline_login_form input:focus,#message_form textarea:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+a.button,button.button{display:inline-block;width:auto;padding:10px 16px;border:0;border-radius:8px;background:#3b82f6;color:#fff;font:inherit;font-size:14px;font-weight:600;text-decoration:none;text-shadow:none;cursor:pointer}a.button:hover,button.button:hover{border:0;background:#2563eb;color:#fff}
+#messages_link{max-width:620px;margin:24px auto 0;padding:16px;background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;text-align:center}#messages_link h3{margin:0 0 8px;font-size:15px}#messages_link p{margin:8px 0;color:#6b7280;font-size:13px;line-height:1.5}
+#footer{clear:both;padding:16px 22px;border-top:1px solid #e5e7eb;background:#fafafa;color:#6b7280;font-size:12px;text-align:center}
+@media(max-width:760px){body{padding:12px}#header{font-size:20px}#menu{float:none;margin-top:10px;line-height:1.8}#content,#photo{float:none;width:100%;border-right:0}#photo{border-top:1px solid #e5e7eb;text-align:center}#avatar{max-width:180px}#post td:first-child,#inline_login_form td:first-child{width:76px}}
+
+.comment-login-required{max-width:520px;margin:24px auto 0;padding:18px;text-align:center;background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;color:#374151}.comment-login-required strong{display:block;margin-bottom:7px}.comment-login-required p{margin:7px 0;color:#6b7280;font-size:13px}.comment-login-required .button{margin-top:4px}
+
+.site_search_form{display:flex;gap:8px;align-items:stretch;position:relative;margin-bottom:24px}
+.site_search_form .site_search_input{flex:1;width:auto;padding:12px 16px;border:1px solid #d1d5db;border-radius:8px;background:#fff;color:#1f2937;font:inherit;font-size:14px}
+.site_search_form .site_search_input:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.site_search_button{width:auto;margin-top:0;white-space:nowrap}
+.search_empty,.search_loading{padding:14px;text-align:center;color:#6b7280;font-size:14px;background:#f9fafb;border:1px dashed #d1d5db;border-radius:8px}
+.search_results_list{display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:8px !important}
+.product_search_section{margin-top:26px;padding:18px;border:1px solid #e2e8f0;border-radius:14px;background:#fbfdff}
+.product_search_section .search_section_title{margin:0 0 12px}
+.product_search_section .site_search_form{margin-bottom:0}
+.search_products_list{margin-top:22px}
+.search_section_title{margin:0 0 12px;color:#374151;font-size:15px;font-weight:700}
+.search_product_card{display:block;text-decoration:none;color:inherit;cursor:pointer}
+.search_product_card:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.search_result_card{display:flex;align-items:center;gap:12px;width:100%;max-width:none;padding:10px;background:#fff;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s}
+.search_result_card:hover{border-color:#3b82f6;box-shadow:0 2px 8px rgba(37,99,235,.12);color:inherit}
+.search_result_photo{flex:none;width:56px;height:56px;object-fit:cover;border-radius:8px;background:#eef0f3}
+.search_result_info{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.search_result_name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#111827;font-size:14px;font-weight:600}
+.search_result_rating{color:#6b7280;font-size:13px}
+.pagination{margin:14px 0;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}.pagination a,.pagination .current{display:inline-flex;min-width:32px;height:32px;padding:0 8px;align-items:center;justify-content:center;border:1px solid #d1d5db;border-radius:7px;background:#fff;color:#374151;text-decoration:none}.pagination .current{background:#3b82f6;color:#fff;border-color:#3b82f6}
+
+.comments-pagination-info{text-align:center;margin:12px 0 6px;color:#777;font-size:12px}
+
+.wallet_card{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px auto 0;max-width:520px;padding:13px 16px;background:#fff;border:1px solid #dbe3ed;border-radius:12px;box-shadow:0 2px 8px rgba(15,23,42,.04)}
+.wallet_card_label{display:block;color:#64748b;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.wallet_card_balance{display:block;margin-top:3px;color:#111827;font-size:20px}
+.wallet_card_hint{color:#64748b;font-size:11px;text-align:right}
+.wallet_topup_form{display:flex;flex-wrap:wrap;gap:8px;margin:10px auto 0;max-width:520px;width:100%}
+.wallet_topup_amount,.wallet_topup_currency{flex:1 1 150px;min-width:0;padding:9px 11px;border:1px solid #d1d5db;border-radius:8px;background:#fff;color:#1f2937;font:inherit;font-size:13px}
+.wallet_topup_amount:focus,.wallet_topup_currency:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.wallet_topup_button{flex:1 1 100%;width:100%;padding:9px 14px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s}
+.wallet_topup_button:hover{background:#1d4ed8}
+.wallet_success{margin:16px auto 0;max-width:520px;padding:12px 16px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:12px;color:#065f46;font-size:13px;text-align:center}
+.team_title{margin:0 0 6px;color:#1f2937;font-size:20px}
+.team_subtitle{margin:0 0 20px;color:#6b7280;font-size:13px}
+.team_grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.team_card{display:flex;align-items:center;gap:12px;padding:12px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;color:inherit;transition:box-shadow .15s,border-color .15s}
+.team_card:hover{border-color:#3b82f6;box-shadow:0 2px 8px rgba(37,99,235,.12);color:inherit}
+.team_photo{flex:none;width:56px;height:56px;object-fit:cover;border-radius:50%;background:#eef0f3}
+.team_info{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.team_name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#111827;font-size:14px;font-weight:600}
+.team_role{color:#2563eb;font-size:12px;font-weight:600}
+.team_rating{color:#6b7280;font-size:12px}
+.team_status{color:#6b7280;font-size:12px}
+.crypto_rates{margin:24px 0 20px;padding:18px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 2px 10px rgba(15,23,42,.04)}
+.crypto_rates_head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.crypto_rates_kicker{display:block;color:#64748b;font-size:10px;font-weight:800;letter-spacing:.08em}
+.crypto_rates h3{margin:3px 0 0;color:#1f2937;font-size:18px}
+.crypto_rates_updated{color:#94a3b8;font-size:11px}
+.crypto_rates_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.crypto_rate_card{display:flex;flex-direction:column;gap:5px;padding:13px;border:1px solid #e5e7eb;border-radius:10px;background:#f8fafc}
+.crypto_rate_symbol{color:#64748b;font-size:11px;font-weight:800}
+.crypto_rate_card strong{color:#111827;font-size:18px}
+.crypto_rate_card small{font-size:11px}
+.crypto_rate_change_up{color:#15803d}
+.crypto_rate_change_down{color:#b91c1c}
+.crypto_rates_source{margin-top:10px;color:#94a3b8;font-size:10px}
+@media(max-width:560px){.wallet_card{align-items:flex-start;flex-direction:column}.wallet_card_hint{text-align:left}.crypto_rates_grid{grid-template-columns:1fr}.crypto_rates_head{align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.wallet_topup_amount,.wallet_topup_currency{flex-basis:100%}}
+
+.private_messages_button{background:#16a34a!important;color:#fff!important}.private_messages_button:hover{background:#15803d!important;color:#fff!important}
+
+/* Поиск товаров на странице профиля */
+.product_search{margin:24px 0 20px;padding:18px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 2px 10px rgba(15,23,42,.04)}
+.product_search_head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.product_search_kicker{display:block;color:#2563eb;font-size:10px;font-weight:800;letter-spacing:.12em}
+.product_search h3{margin:3px 0 0;color:#1f2937;font-size:18px}
+.product_search_hint{color:#94a3b8;font-size:11px}
+.product_search_form{display:flex;gap:8px;margin-bottom:12px}
+.product_search_form input{flex:1;min-width:0;padding:11px 13px;border:1px solid #d1d5db;border-radius:9px;font:inherit}
+.product_search_form input:focus{outline:none;border-color:#60a5fa;box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.product_search_form button{border:0}
+.product_search_status{margin:10px 0;color:#64748b;font-size:12px}
+@media(max-width:480px){.product_search_form{flex-direction:column}.product_search_form button{width:100%}}
